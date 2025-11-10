@@ -1,15 +1,17 @@
 import sys
+
+# If user provides salary input
 if len(sys.argv) == 2:
-    script_name = sys.argv[0]
     salary = float(sys.argv[1])
-    print("User provided salary:")
 else:
-    script_name = sys.argv[0]
-    salary = 50000.0  # default salary
-    print("No input given - using default salary:")
+    # Default salary if no input is given
+    print("No input provided. Using default salary: 50000")
+    salary = 50000.0
+
+# Calculate 10% bonus
 bonus = salary * 0.10
 total_salary = salary + bonus
-print("Script Name:", script_name)
-print("Basic Salary:", salary)
-print("Bonus Amount (10%):", bonus)
-print("Total Salary (with Bonus):", total_salary)
+
+# Display results
+print("Bonus Amount:", bonus)
+print("Total Salary after adding Bonus:", total_salary)
